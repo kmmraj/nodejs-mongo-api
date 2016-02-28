@@ -15,7 +15,7 @@ app.param('collectionName', function(req, res, next, collectionName) {
 
 // curl -X GET http://api-endpoint
 app.get('/', function(req, res, next) {
-    res.send('Hello!')
+    res.send('Hello Mohan!')
 })
 
 // curl -X GET http://api-endpoint/collection-name
