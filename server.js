@@ -6,7 +6,7 @@ var express = require('express'),
 var app = express()
 app.use(bodyParser())
 
-var db = mongoskin.db('mongodb://yourmongoserveruri', {safe:true})
+var db = mongoskin.db('mongodb://mongodb-nodejs-mongo-ex.apps.10.2.2.2.xip.io', {safe:true})
 
 app.param('collectionName', function(req, res, next, collectionName) {
 	req.collection = db.collection(collectionName)
@@ -15,7 +15,7 @@ app.param('collectionName', function(req, res, next, collectionName) {
 
 // curl -X GET http://api-endpoint
 app.get('/', function(req, res, next) {
-    res.send('Hello Mohan!!!')
+    res.send('Hello Mohan!!!!')
 })
 
 // curl -X GET http://api-endpoint/collection-name
